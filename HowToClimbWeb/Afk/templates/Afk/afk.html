@@ -1,0 +1,44 @@
+﻿{% extends "Afk/base.html" %}
+{% block content %}
+<div class="page-header">
+        <h1>Afk counter</h1>
+      </div>
+{% if myAfk.totalGames == 0 %}
+<div class="alert alert-warning" role="alert">
+        <strong>Warning!</strong> You didnt play any games in ranked dynamic queue or ranked team builder during the season 2016.
+      </div>
+     {% else %}
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Who afk ?</th>
+                  <th>2 to 5 minuts</th>
+                  <th>5 to 15 minuts</th>
+                  <th>More than 15 minuts</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for key, value in myAfk.totalAfk.items %}
+                <tr>
+                    <td>{{key.title}}</td>
+                    <td style="text-align:center">{{value.short}}</td>
+                    <td style="text-align:center">{{value.medium}}</td>
+                    <td style="text-align:center">{{value.long}}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+           </table>
+         </div>
+          <div class="col-md-6">
+          <div class="well">
+              <p>
+                  These stats are from the last {{myAfk.totalGames}} games you played in ranked dynamic queue or ranked team builder during the season 2016.
+              </p>
+              </div>
+          </div>
+       </div>
+{% endif %}
+{% endblock content %}
+

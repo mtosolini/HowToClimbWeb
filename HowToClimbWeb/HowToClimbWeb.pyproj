@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>HowToClimbWeb</Name>
+    <RootNamespace>HowToClimbWeb</RootNamespace>
+    <InterpreterId>{24ca0362-56b3-44c4-926e-8f3e57439cd6}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>be57c510-6227-4464-85c3-1e8bbba15969</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>HowToClimbWeb.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Afk\admin.py" />
+    <Compile Include="Afk\apps.py" />
+    <Compile Include="Afk\migrations\__init__.py" />
+    <Compile Include="Afk\models.py" />
+    <Compile Include="Afk\tests.py" />
+    <Compile Include="Afk\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Afk\views.py" />
+    <Compile Include="Afk\__init__.py" />
+    <Compile Include="HowToClimb\afk.py" />
+    <Compile Include="HowToClimb\apicall.py" />
+    <Compile Include="HowToClimb\cfg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HowToClimb\counterJungle.py" />
+    <Compile Include="HowToClimb\geometry.py" />
+    <Compile Include="HowToClimb\matchFct.py" />
+    <Compile Include="HowToClimb\myRateLimiter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HowToClimb\myTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HowToClimb\var.py" />
+    <Compile Include="HowToClimb\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="HowToClimbWeb\__init__.py" />
+    <Compile Include="HowToClimbWeb\settings.py" />
+    <Compile Include="HowToClimbWeb\urls.py" />
+    <Compile Include="HowToClimbWeb\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Afk\templates\Afk\afk.html" />
+    <Content Include="Afk\templates\Afk\base.html" />
+    <Content Include="Afk\templates\Afk\index.html" />
+    <Content Include="HowToClimbWeb\secretKey.txt" />
+    <Content Include="HowToClimb\ApiKey.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Afk\" />
+    <Folder Include="Afk\migrations\" />
+    <Folder Include="Afk\templates\" />
+    <Folder Include="Afk\templates\Afk\" />
+    <Folder Include="HowToClimbWeb\" />
+    <Folder Include="HowToClimb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{24ca0362-56b3-44c4-926e-8f3e57439cd6}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
+      <Version>3.5</Version>
+      <Description>env (Python 64-bit 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
